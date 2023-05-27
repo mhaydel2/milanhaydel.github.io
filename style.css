@@ -97,12 +97,18 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
 }
+/*resume text*/
 .about-col-2 p a{
     text-decoration: none;
     height: 3px;
     width: 100%;
     color: #cda599;
 }
+.about-col-2 p a:hover{
+    color: #C89D90;
+    font-weight: 700;
+}
+/*resume text*/
 .sub-title{
     font-size: 60px;
     font-weight: 600;
@@ -308,7 +314,7 @@ nav ul li a:hover::after{
 .contact-left p{
     margin-top: 30px;
 }
-.contact-left p i{
+.contact-left p a i{
     color: #dec3bb;
     margin-right: 15px;
     font-size: 25px;
@@ -386,7 +392,7 @@ nav .fa-bars{
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     #header{
         background-image: url("images/pfp_phone_bg.png");
     }

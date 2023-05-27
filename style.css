@@ -4,10 +4,19 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+@keyframes transitionIn {
+    from{
+        opacity: 50%;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
 
 html{
     scroll-behavior: smooth;
-    transition: 10s;
 }
 
 body{
@@ -21,6 +30,7 @@ body{
     background-size: cover;
     background-position: center;
     background-image: url("images/pfp_background.png");
+    animation: transitionIn 0.75s;
 }
 .container{
     padding: 10px 10%;
@@ -97,6 +107,14 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
 }
+/*About Me text*/
+.about-col-2 h1{
+    margin-bottom: 10px;
+}
+/*About Me summary*/
+.about-col-2 p{
+    line-height: 1.4;
+}
 /*resume text*/
 .about-col-2 p a{
     text-decoration: none;
@@ -109,6 +127,7 @@ nav ul li a:hover::after{
     font-weight: 700;
 }
 /*resume text*/
+
 .sub-title{
     font-size: 60px;
     font-weight: 600;
@@ -156,7 +175,7 @@ nav ul li a:hover::after{
 
 
 
-/*----------services----------*/
+/*----------specialties----------*/
 
 #services{
     padding: 100px 0;
@@ -172,6 +191,7 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
+/*For each grid*/
 .services-list div{
     background: #e6e6e6;
     padding: 40px;
@@ -180,15 +200,22 @@ nav ul li a:hover::after{
     transition: background 0.5s, transform 0.5s;
     border-radius: 15px;
 }
+/*For the icons*/
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
 }
+/*For the heading of each grid*/
 .services-list div h2{
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 15px;
 }
+/*For the paragraph text of each grid*/
+.services-list div p{
+    line-height: 1.4;
+}
+/*For the Learn More link*/
 .services-list div a{
     text-decoration: none;
     color: #C89D90;
@@ -260,6 +287,8 @@ nav ul li a:hover::after{
 }
 .layer p{
     font-size: 15px;
+    line-height: 1.4;
+    font-weight: 400;
 }
 .layer a{
     margin-top: 20px;

@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+@keyframes transitionIn {
+    from{
+        opacity: 50%;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body{
+    background: #fbfaf9;
+    color: black;
+    animation: transitionIn 0.75s;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: black; <!-- #d0c39f -->
+}
+.container{
+    padding: 20px 10%;
+}
+#header {
+    width: 100%;
+}
+.container-h{
+    margin: 10px 10%;
+    margin-bottom: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 0;
+    margin-right: 50px;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #dec3bb;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+/*-----------portfolio-----------*/
+
+#portfolio {
+    padding: 50px 0;
+    color: white;
+}
+.container-p{
+    padding: 2px 10%;
+}
+.container-header{
+    display: flex;
+    padding: 50px 50px;
+}
+/*For the icon before the heading of each row*/
+.container-header i{
+    display: flex;
+    align-items: center;
+    position: center;
+    font-size: 50px;
+    margin: 0 10px;
+}
+/*For the heading of each row*/
+.container-header h2{
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    position: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+/*icon for each project 'link'*/
+.container-p h2 i{
+    font-size: 40px;
+    margin-right: 20px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+.work{
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,.6), #dec3bb);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.3s;
+    color: #fbfaf9;
+}
+.layer h3{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.layer p{
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+.layer a{
+    margin-top: 20px;
+    color: #dec3bb;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.layer i{
+    font-size: 18px;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}

@@ -143,6 +143,10 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    transition: transform 0.5s;
+}
+.tab-links:hover{
+    transform: translateY(-5px);
 }
 .tab-links::after{
     content: '';

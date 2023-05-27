@@ -18,6 +18,7 @@ body{
     background: #fbfaf9;
     color: black;
     animation: transitionIn 0.75s;
+    padding-bottom: 50px;
 }
 .sub-title{
     font-size: 60px;
@@ -182,4 +183,18 @@ nav ul li a:hover::after{
 }
 #softDev{
     animation: transitionIn 0.75s;
+}
+
+@media only screen and (max-width: 768px){
+    .sub-title{
+        font-size: 40px;
+    }
+    .container-header{
+        display: inline-block;
+        padding: 20px 20px;
+    }
+    .row-N{
+        padding: 50px 0;
+        padding-bottom: 50px;
+    }
 }

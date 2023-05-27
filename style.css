@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+    transition: 10s;
+}
+
 body{
     background: #fbfaf9;
     color: black;
@@ -67,8 +72,13 @@ nav ul li a:hover::after{
     color: #dec3bb;
 }
 
+
+/*---------about--------*/
+
 #about{
-    padding: 80px;
+    padding-top: 70px;
+    padding-bottom: 0;
+    margin-top: 100px;
     color: dimgrey;
 }
 .row{
@@ -79,6 +89,7 @@ nav ul li a:hover::after{
 .about-col-1{
     flex-basis: 35%;
 }
+/* ABOUT ME IMAGE */
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
@@ -86,8 +97,396 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
 }
+.about-col-2 p a{
+    text-decoration: none;
+    height: 3px;
+    width: 100%;
+    color: #cda599;
+}
 .sub-title{
     font-size: 60px;
     font-weight: 600;
+    color: black; <!-- #d0c39f -->
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #dec3bb;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    font-size: 17px;
+    color: #cda599;
+    font-weight: bold;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+/*----------services----------*/
+
+#services{
+    padding: 100px 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.container{
+    padding: 10px 10%;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #e6e6e6;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    transition: background 0.5s, transform 0.5s;
+    border-radius: 15px;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #C89D90;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div p{
+    font-weight: 350;
+}
+.services-list div:hover{
+    background: #E4CEC8;
+    transform: translateY(-10px);
+}
+.services-list div a:hover{
+    color: #BC8777;
+}
+
+ /*------------portfolio--------------*/
+
+#portfolio {
+    padding: 50px 0;
+    color: white;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+.work{
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,.6), #dec3bb);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.3s;
+}
+.layer h3{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.layer p{
+    font-size: 15px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #dec3bb;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/*see more button*/
+.btn{
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+    border: 2px solid #dec3bb;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
     color: black;
+    font-weight: 200;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+.btn:hover{
+    background: #dec3bb;
+}
+
+/*----------contact-----------*/
+#contact{
+    padding-top: 70px;
+    margin-top: 50px;
+}
+.row{
+    margin-bottom: 100px;
+}
+.contact-left{
+    flex-basis: 30%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #dec3bb;
+    margin-right: 15px;
+    font-size: 25px;
+    transition: transform 0.3s;
+}
+.contact-left p i:hover{
+    transform: translateY(-5px);
+}
+.paper-plane:hover .fa-paper-plane:before{
+    content: "\f1d8";
+    font-weight: 900;
+}
+.social-icons{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: black;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #dec3bb;
+    transform: translateY(-5px);
+}
+.contact-left a i{
+    margin-right: 5px;
+}
+.btn.btn2{
+    display: inline-block;
+    margin: 30px auto;
+    transition: transform 0.5s;
+}
+.btn.btn2:hover{
+    transform: translateY(-5px);
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #e6e6e6;
+    padding: 15px;
+    margin: 10px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 15px;
+    margin-top: 20px;
+    background: #dec3bb;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #e6e6e6;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/*-----------cs for phone screen--------------*/
+nav .fa-circle-xmark{
+    display: none;
+}
+nav .fa-bars{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url("images/pfp_phone_bg.png");
+    }
+    .header-text{
+        margin-top: 115%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+        color: white;
+        text-shadow: -.2px 1px black, 1.5px 1.5px black, 1.5px 0 black, 2px 1px black;
+    }
+    nav .fa-bars{
+        display: block;
+        font-size: 25px;
+        transition: .2s;
+    }
+    nav .fa-bars:hover{
+        color: #cda599;
+        cursor: pointer;
+    }
+    nav .fa-circle-xmark{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #e6e6e6;
+        position: fixed;
+        top: 0;
+        right: -150px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 20px;
+        padding-left: 20px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-circle-xmark{
+        display: block;
+        position: center;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul .fa-circle-xmark:hover{
+        color: #cda599;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    #about{
+        padding: 50px 0;
+        padding-bottom: 0;
+    }
+    .about-col-1 img{
+        width: 100%;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    #services{
+        padding: 50px 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    #portfolio{
+        margin-bottom: 0;
+    }
+    #contact{
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    .work{
+        width: 100%;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: #cda599;
+    margin-top: -20px;
+    display: block;
 }

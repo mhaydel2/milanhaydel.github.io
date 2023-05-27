@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <title>Milan Haydel</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/766df6b6fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!----------------header--------------->
 <div id="header">
     <div class="container">
         <nav>
             <img src="images/logo.png" class="logo" width="150" height="-50 ">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sideMenu">
+                <i class="fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
         <div class="header-text">
             <p>Software Developer</p>
@@ -23,11 +28,12 @@
         </div>
     </div>
 </div>
+<!----------------about--------------->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-
+                <img src="images/aboutme_img.png">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -36,11 +42,192 @@
                     with several projects using the Agile methodology and
                     experience using Javascript, HTML, and CSS. I also have
                     experience using MongoDB, SQL, and HQL. My experience creating
-                    applications is detailed in my resume. </p>
+                    applications is detailed in my <a href="#contact">resume</a>. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>Java, Python, C++, C#, SQL, Javascript (ES6+), HTML, CSS</li>
+                        <li><span>Developer Tools</span><br>Git, Springboot, Maven</li>
+                        <li><span>Project Management Tools</span><br>GitHub, Jira</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>Team Lead for Pet Haven Web App</li>
+                        <li><span>2023</span><br>Team Lead and Lead Developer for Multi-Thread Application</li>
+                        <li><span>2022</span><br>Software Developer for Calculator Web App</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019 - 2023</span><br>BS in Computer Science from University of Louisiana at Lafayette</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<!----------------services--------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-window-maximize" style="color: #cda599;"></i>
+                <h2>Web Design</h2>
+                <p>From concept to completion,
+                    I understand the goals, target audience,
+                    and design preferences. Using the latest web design techniques
+                    and technologies, I create user-friendly and responsive websites
+                    that ensure a seamless browsing experience across all devices.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <!--<div>
+                <i class="fa-solid fa-code"></i>
+                <h2>UI/UX Design</h2>
+                <p>A website's success relies heavily on its user experience and interface. I pay careful attention to user flow, information architecture, and intuitive navigation to enhance the usability and engagement of your website. By creating visually appealing interfaces and optimizing the user journey, I ensure that visitors have a memorable and satisfying experience on your site.</p>
+                <a href="#">Learn more</a>
+            </div>-->
+            <div>
+                <i class="fa-solid fa-code" style="color: #cda599;"></i>
+                <h2>Software Development</h2>
+                <p>Using the latest
+                    technologies and development practices, I create robust, scalable,
+                    and secure software that aligns with the business goals.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------portfolio--------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/petHaven.jpg">
+                <div class="layer">
+                    <h3>PetHaven Web Application</h3>
+                    <p>A mobile-friendly site for a local non-profit pet shelter PetHaven that
+                        educates, engages, and supports fundraising/revenue generation to help
+                        make them more sustainable. </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #AB6955;"></i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/petHaven.jpg">
+                <div class="layer">
+                    <h3>Multi-Threading Application</h3>
+                    <p>This application aims to develop a simulation of single-core and multi-core systems
+                        and scheduler with various scheduling algorithms (FCFS, RR, NSJF, PSJF).</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #AB6955;"></i></i></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">SEE MORE</a>
+    </div>
+</div>
+<!----------------contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><a href="mailto: milanhaydel2@gmail.com" target="_blank" class="paper-plane"><i class="fa-regular fa-paper-plane"></i></a>milanhaydel2@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/milan-haydel/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="http://www.github.com/mhaydel2/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="images/milanhaydel23.pdf" download class="btn btn2"><i class="fa-solid fa-download"></i>RESUME</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message.."></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Milan. Made with <i class="fa-solid fa-heart"></i> and HTML, Javascript, CSS</p>
+    </div>
+</div>
 
+<!--This is a script for tab content under About section-->
+<script>
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+
+    function openTab(tabName){
+        /*
+         * This for loop will result in the removal of the line under
+         * the current active tab that is selected by the user
+         */
+        for (tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+        /*
+         * This for loop will result in the removal of the display
+         * block of the current active tab, so that the old Content
+         * is no longer displayed once the user selects a new tab.
+         */
+        for (tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+
+        /*
+         * This event line of code will add the string "active-link"
+         * to the class of the selected tab so that it will have a
+         * line added underneath showing that it is selected.
+         */
+        event.currentTarget.classList.add("active-link");
+        /*
+         * This getElementById uses the passed 'tabName' from the user
+         * selection and will be used to get the 'tab-contents' and
+         * add 'active-tab' to the class so that the content will
+         * display for the tab selected by the user.
+         */
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+</script>
+<!--This is a script for phone screen viewing navigation menu-->
+<script>
+    var sideMenu = document.getElementById("sideMenu");
+
+    function openMenu(){
+        sideMenu.style.right = "0";
+    }
+    function closeMenu(){
+        sideMenu.style.right = "-200px";
+    }
+</script>
+
+<!--This is a script for portolfio contact form-->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzfioRne7sJ4Ye_Ug8rQ4WBSHPSSj721l4yqNtB_fUhqmd3UMCAdWKGbSejHimM8eOR/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent"
+                setTimeout(function (){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>

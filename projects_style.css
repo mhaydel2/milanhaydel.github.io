@@ -131,6 +131,15 @@ nav ul li a:hover::after{
     overflow: hidden;
     display: flex;
 }
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
 .work-desc{
     width: 600px;
     /*margin: auto;*/
@@ -138,12 +147,6 @@ nav ul li a:hover::after{
 .work-desc h2{
     font-size: 40px;
     margin-bottom: 20px;
-}
-.work-desc h3{
-    margin: 10px 0;
-}
-.work-desc p{
-    line-height: 1.4;
 }
 .work-desc h2 a{
     margin: 0 20px;
@@ -155,14 +158,14 @@ nav ul li a:hover::after{
     color: #C89D90;
     transform: translateY(-5px);
 }
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
+.work-desc h3{
+    margin: 10px 0;
 }
-.work:hover img{
-    transform: scale(1.1);
+.work-desc p{
+    line-height: 1.4;
+}
+.text-tools{
+    width: 200px;
 }
 #softDev{
     animation: transitionIn 0.75s;

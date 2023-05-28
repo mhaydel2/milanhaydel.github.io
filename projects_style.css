@@ -111,15 +111,18 @@ nav ul li a:hover::after{
     margin-right: 20px;
     color: #dec3bb;
 }
-.fa-github-alt:hover{
+/*Hovering over the button will change the color of the font
+  awesome icon*/
+.layer a:hover .fa-github-alt{
     color: #C89D90;
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
     grid-gap: 200px;
     margin-top: 0px;
     margin-bottom: 100px;
+    padding: 0 10%;
 }
 .work{
     width: 350px;
@@ -127,13 +130,13 @@ nav ul li a:hover::after{
     position: relative;
     overflow: hidden;
     display: flex;
-    margin-left: 150px;
 }
 .work-desc{
     width: 600px;
     /*margin: auto;*/
 }
 .work-desc h2{
+    font-size: 40px;
     margin-bottom: 20px;
 }
 .work img{

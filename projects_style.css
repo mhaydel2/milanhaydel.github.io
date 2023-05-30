@@ -108,24 +108,26 @@ nav ul li a:hover::after{
 /*icon for each project 'link'*/
 .container-p h2 i{
     font-size: 40px;
-    margin-right: 20px;
+    float: right;
     color: #dec3bb;
+    padding: 0 10px;
 }
 /*Hovering over the button will change the color of the font
   awesome icon*/
-.layer a:hover .fa-github-alt{
+.container-p h2 a:hover i{
     color: #C89D90;
+    transform: translateY(-5px);
 }
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-    grid-gap: 200px;
+    grid-gap: 250px;
     margin-top: 0px;
-    margin-bottom: 100px;
-    padding: 0 10%;
+    margin-bottom: 150px;
+    padding: 0 5%;
 }
 .work{
-    width: 350px;
+    width: 450px;
     border-radius: 10px;
     position: relative;
     display: table-cell;
@@ -154,10 +156,6 @@ nav ul li a:hover::after{
 }
 .work-desc i{
     transition: transform 0.3s;
-}
-.work-desc h2 a:hover .fa-github-alt{
-    color: #C89D90;
-    transform: translateY(-5px);
 }
 .work-desc h3{
     margin: 10px 0;

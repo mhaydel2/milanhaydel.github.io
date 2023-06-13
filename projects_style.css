@@ -83,6 +83,7 @@ nav ul li a:hover::after{
 .container-header{
     display: flex;
     padding: 50px 50px;
+    padding-bottom: 0px;
 }
 .row{
     padding: 50px 0;
@@ -122,9 +123,12 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
     grid-gap: 250px;
-    margin-top: 0px;
-    margin-bottom: 150px;
     padding: 0 5%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.work-list.first {
+    padding-top: 75px;
 }
 .work{
     width: 450px;
